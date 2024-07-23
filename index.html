@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vish</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="container">
+    <p>Backgroundcolor : <span class="span">NONE</span></p>
+  </div>
+  <div class="button">
+  <button onclick="change()">click me</button>
+  </div>
+  <script>
+    let color=["green","blue","pink","yellow"];
+    var index=0;
+    function change(){
+      document.getElementById("container").style.backgroundColor=color[index];
+      document.getElementsByClassName("span")[0].innerHTML=color[index];
+      index=(index+1)%color.length;  
+    }
+  </script>
+</body>
+</html>
